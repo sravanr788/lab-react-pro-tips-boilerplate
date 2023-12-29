@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState , useContext } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { AppContext } from '../context/AuthContext';
 
 const Form = () => {
   // state to check if the form is submitted
   const [formSubmit, setFormSubmit] = useState(false);
+
+  const {setSubmit} = useContext(AppContext);
 
   // state to keep track of all errors
   const [formErr, setFormErr] = useState({});
@@ -39,6 +42,7 @@ const Form = () => {
     } else {
       setFormSubmit(false);
     }
+    setSubmit(true);
   };
 
   const validate = (data) => {

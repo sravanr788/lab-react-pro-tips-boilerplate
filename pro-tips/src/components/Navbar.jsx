@@ -22,6 +22,9 @@ const Navbar = () => {
         <Link to="/form" style={{textDecoration : "none",color : "black"}}>
             <h1 style={{cursor : "pointer"}}>RegistrationForm</h1>
         </Link>
+        <Link to="/content" style={{textDecoration : "none",color : "black"}}>
+            <h1 style={{cursor : "pointer"}}>Content</h1>
+        </Link>
         </div>
     </div>
     </div>
